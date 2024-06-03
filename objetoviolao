@@ -1,0 +1,43 @@
+package entidades;
+
+public class Violao implements Instrumento{
+    private String corda;
+    private boolean afinado;
+
+    public Violao(String corda, boolean afinado) {
+        this.corda = corda;
+        this.afinado = afinado;
+    }
+
+    public String getCorda() {
+        return corda;
+    }
+
+    public void setCorda(String corda) {
+        this.corda = corda;
+    }
+
+    public boolean getAfinado() {
+        return afinado;
+    }
+
+    public void setAfinado(boolean afinado) {
+        this.afinado = afinado;
+    }
+
+    @Override
+    public String tocarnota(String nota) {
+        return "Tocando a nota " + nota + " no violão.";
+    }
+
+    @Override
+    public boolean afinacao() {
+        if (afinado) {
+            System.out.println("O violão está afinado.");
+        } else {
+            System.out.println("O violão não está afinado.");
+        }
+        return afinado;
+
+        }
+}
