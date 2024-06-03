@@ -1,0 +1,6 @@
+package entidades;
+
+public interface Instrumento {
+    String tocarnota(String nota);
+    boolean afinacao();
+}
