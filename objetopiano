@@ -1,0 +1,43 @@
+package entidades;
+
+public class Piano implements Instrumento {
+    private String tipo;
+    private boolean afinado;
+
+    public Piano(String tipo, boolean afinado) {
+        this.tipo = tipo;
+        this.afinado = afinado;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
+    public boolean getAfinado() {
+        return afinado;
+    }
+
+    public void setAfinado(boolean afinado) {
+        this.afinado = afinado;
+    }
+
+    @Override
+    public String tocarnota(String nota) {
+        return "Tocando a nota " + nota + " no piano.";
+    }
+
+    @Override
+    public boolean afinacao() {
+        if (afinado) {
+            System.out.println("O piano está afinado.");
+        } else {
+            System.out.println("O piano não está afinado.");
+        }
+        return afinado;
+
+    }
+}
